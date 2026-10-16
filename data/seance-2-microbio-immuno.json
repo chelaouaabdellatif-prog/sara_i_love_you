@@ -1,0 +1,336 @@
+[
+  {
+    "id": "s2-mic-21",
+    "module": "Microbiologie",
+    "text": "Parmi les propositions suivantes, indiquez celle qui s'applique aux plasmides :",
+    "choices": [
+      "Ils sont transférés d'une cellule bactérienne à l'autre par conjugaison",
+      "Ce sont des fragments d'ARN cytoplasmiques",
+      "Ils sont uniquement des médiateurs de la résistance aux antibiotiques",
+      "Ils sont spécifiques des seules entérobactéries",
+      "Aucune de ces propositions"
+    ],
+    "correct": [0],
+    "explanation": "Les plasmides conjugatifs (auto-transmissibles) passent d'une bactérie à l'autre par conjugaison. Les plasmides non conjugatifs peuvent être mobilisés (donation ou conduction). Ce sont des molécules d'ADN, pas d'ARN."
+  },
+  {
+    "id": "s2-imm-22",
+    "module": "Immunologie",
+    "text": "À quelle(s) étape(s) de la réplication virale peuvent intervenir les anticorps neutralisants ?",
+    "choices": [
+      "L'attachement du virus",
+      "La réplication du génome",
+      "La production des messagers viraux",
+      "La synthèse des enzymes viro-induites",
+      "L'assemblage"
+    ],
+    "correct": [0],
+    "explanation": "Les anticorps neutralisants ciblent le virus libre extracellulaire : pendant la virémie ou au moment de l'attachement du virus à la cellule."
+  },
+  {
+    "id": "s2-mic-23",
+    "module": "Microbiologie",
+    "text": "Le glissement antigénique observé chez les virus de la grippe a les caractères suivants sauf un. Indiquez lequel :",
+    "choices": [
+      "Concerne les virus influenza A et B",
+      "Donne des modifications antigéniques de l'hémagglutinine",
+      "Est marqué par l'apparition de nouveaux variants à l'intérieur du même sous-type",
+      "A pour origine probable des échanges de gènes entre souches humaines et souches animales",
+      "Oblige à reconsidérer la composition des vaccins tous les ans ou tous les 2 ans environ"
+    ],
+    "correct": [3],
+    "explanation": "Les échanges de gènes (réassortiments) entre souches humaines et animales expliquent les cassures antigéniques du virus A, à l'origine des pandémies, et non les glissements (mutations ponctuelles)."
+  },
+  {
+    "id": "s2-mic-24",
+    "module": "Microbiologie",
+    "text": "Un des caractères suivants concernant la mutation bactérienne est faux. Lequel ?",
+    "choices": ["Rareté", "Spontanéité", "Stabilité", "Irréversibilité", "Spécificité"],
+    "correct": [3],
+    "explanation": "Rareté, spontanéité, stabilité et spécificité sont les 4 caractères fondamentaux. La mutation inverse (réversion) reste toujours possible, ce qui ne contredit pas la stabilité."
+  },
+  {
+    "id": "s2-imm-25",
+    "module": "Immunologie",
+    "text": "Le lysozyme est :",
+    "choices": [
+      "Une endotoxine bactérienne",
+      "Un médiateur de l'hypersensibilité immédiate",
+      "Une enzyme antibactérienne des larmes et de la salive",
+      "Une organelle intracytoplasmique riche en enzymes lytiques",
+      "Une lymphokine"
+    ],
+    "correct": [2],
+    "explanation": "Le lysozyme (immunité innée) hydrolyse le peptidoglycane de la paroi bactérienne ; il est présent dans les larmes, la salive, le mucus. À ne pas confondre avec le lysosome (organite)."
+  },
+  {
+    "id": "s2-mic-26",
+    "module": "Microbiologie",
+    "text": "Concernant le transfert génétique par conjugaison chez les bactéries, quelle est la seule proposition exacte ?",
+    "choices": [
+      "Nécessite l'intervention d'un bactériophage",
+      "Nécessite qu'une des deux bactéries héberge un plasmide",
+      "Ne nécessite pas qu'il y ait contact entre les bactéries",
+      "Consiste en un transfert d'ARN d'une bactérie à une autre",
+      "Ne concerne que les caractères de résistance aux antibiotiques"
+    ],
+    "correct": [1],
+    "explanation": "La conjugaison nécessite un plasmide conjugatif (facteur F) et un contact par pili sexuels ; c'est toujours un transfert d'ADN. Le bactériophage intervient dans la transduction."
+  },
+  {
+    "id": "s2-mic-27",
+    "module": "Microbiologie",
+    "text": "Les cassures antigéniques observées chez les virus de la grippe ont les caractères suivants sauf un. Lequel ?",
+    "choices": [
+      "Ne concernent que les virus influenza A",
+      "Sont à l'origine des pandémies de grippe",
+      "Donnent notamment des modifications antigéniques majeures de l'hémagglutinine",
+      "Sont dues à des mutations ponctuelles portant sur quelques bases du génome viral",
+      "Surviennent environ tous les 10 ans"
+    ],
+    "correct": [3],
+    "explanation": "Les mutations ponctuelles expliquent les glissements antigéniques. Les cassures sont dues à des réassortiments de gènes (modification majeure de l'hémagglutinine, parfois de la neuraminidase)."
+  },
+  {
+    "id": "s2-imm-28",
+    "module": "Immunologie",
+    "text": "Parmi les caractères suivants, indiquez celui qui ne s'applique qu'au vaccin B.C.G. :",
+    "choices": [
+      "Souche de Mycobacterium tuberculosis atténuée",
+      "Extraits de bacilles de Koch chauffés",
+      "Souche tuée de Mycobacterium bovis",
+      "Souche de Mycobacterium bovis vivante mais atténuée",
+      "Extraits protéiques de Mycobacterium tuberculosis provenant de tuberculines purifiées"
+    ],
+    "correct": [3],
+    "explanation": "Le BCG (bacille de Calmette et Guérin) est une souche de M. bovis vivante, atténuée par repiquages successifs sur milieu bilié glycériné."
+  },
+  {
+    "id": "s2-imm-29",
+    "module": "Immunologie",
+    "text": "L'immunité engendrée chez l'homme par l'antitoxine tétanique est :",
+    "choices": [
+      "D'effet immédiat",
+      "À support humoral",
+      "À support cellulaire",
+      "Durable",
+      "Utilisable en vaccination préventive"
+    ],
+    "correct": [0, 1],
+    "explanation": "L'antitoxine (immunoglobulines, sérothérapie) donne une immunité passive, humorale, immédiate mais courte (≈ 3 semaines). L'immunité durable et la vaccination concernent l'anatoxine."
+  },
+  {
+    "id": "s2-mic-30",
+    "module": "Microbiologie",
+    "text": "On n'a encore jamais observé de phénomènes de résistance d'origine plasmidique pour :",
+    "choices": ["Chloramphénicol", "Colistine", "Pénicilline G", "Gentamicine", "Acide nalidixique"],
+    "correct": [1, 4],
+    "explanation": "Réponse classique des annales : pas de résistance plasmidique aux quinolones (acide nalidixique) ni aux polypeptides (colistine), ni à la rifampicine ou la vancomycine. (Des résistances plasmidiques ont été décrites depuis, mais on garde la réponse de l'annale.)"
+  },
+  {
+    "id": "s2-mic-31",
+    "module": "Microbiologie",
+    "text": "La résistance plasmidique aux antibiotiques est le mode de résistance le plus redoutable en médecine humaine. Indiquez la ou les propositions exactes :",
+    "choices": [
+      "L'administration d'un seul antibiotique peut sélectionner une souche bactérienne multi-résistante",
+      "La transmission de la résistance est héréditaire",
+      "La transmission de la résistance aux bactéries sensibles se fait sur un mode épidémique",
+      "La résistance peut être transférée d'un Escherichia coli à un Pseudomonas aeruginosa",
+      "La résistance plasmidique concerne la plupart des grandes familles antibiotiques"
+    ],
+    "correct": [0, 1, 2, 3, 4],
+    "explanation": "Toutes exactes. Les plasmides (ADN circulaire extrachromosomique à réplication autonome) se transmettent de façon stable aux descendants et horizontalement entre espèces. Exceptions : polypeptides, quinolones, rifampicine, vancomycine."
+  },
+  {
+    "id": "s2-mic-32",
+    "module": "Microbiologie",
+    "text": "Chez l'homme, une infection virale latente peut être provoquée par :",
+    "choices": ["Myxovirus influenzae", "Herpès simplex virus", "Virus rabique", "Virus de la varicelle", "Poliovirus"],
+    "correct": [1, 3],
+    "explanation": "Les Herpesviridae persistent après la primo-infection (latence) : neurone sensitif pour HSV 1, HSV 2 et VZV ; leucocytes pour CMV et EBV."
+  },
+  {
+    "id": "s2-imm-33",
+    "module": "Immunologie",
+    "text": "Le vaccin antigrippal (annale, France) :",
+    "choices": [
+      "Est préparé sur œuf",
+      "Est polyvalent grippes A et B",
+      "Sa composition est adaptée aux souches les plus actuelles",
+      "Est administré par voie sous-cutanée",
+      "Nécessite un rappel tous les 5 ans"
+    ],
+    "correct": [0, 1, 2, 3],
+    "explanation": "Préparé sur œuf embryonné (contre-indiqué en cas d'allergie vraie à l'œuf), polyvalent (souches A + B), composition revue chaque année selon l'OMS. Revaccination annuelle, pas tous les 5 ans. (Aujourd'hui la voie est le plus souvent intramusculaire.)"
+  },
+  {
+    "id": "s2-mic-34",
+    "module": "Microbiologie",
+    "text": "La toxine tétanique est une toxine protéique ; ces toxines protéiques :",
+    "choices": [
+      "Ont une action pyrogène",
+      "Sont thermostables",
+      "Sont détoxifiables",
+      "Sont antigéniques",
+      "Font élaborer des anticorps protecteurs"
+    ],
+    "correct": [2, 3, 4],
+    "explanation": "Les exotoxines protéiques sont thermolabiles, non pyrogènes, très antigéniques et détoxifiables par le formol en anatoxines, qui font produire des anticorps protecteurs."
+  },
+  {
+    "id": "s2-mic-35",
+    "module": "Microbiologie",
+    "text": "La primo-infection herpétique génitale de la femme :",
+    "choices": [
+      "Est le plus souvent à virus HSV 1",
+      "Est hyperalgique",
+      "S'accompagne d'un frisson inaugural",
+      "Est habituellement secondaire à un contage vénérien",
+      "Est souvent associée à une infection à cytomégalovirus"
+    ],
+    "correct": [1, 3],
+    "explanation": "Le plus souvent HSV 2. Quand elle est symptomatique : vésicules très douloureuses qui s'ulcèrent. Fièvre et adénopathies possibles, mais pas de frisson inaugural. Transmission sexuelle."
+  },
+  {
+    "id": "s2-mic-36",
+    "module": "Microbiologie",
+    "text": "Concernant les Myxovirus influenzae de type A, quelle(s) est (sont) la (les) proposition(s) exacte(s) ?",
+    "choices": [
+      "Ont un ARN segmenté",
+      "Peuvent présenter des mutations de leurs antigènes d'enveloppe",
+      "Ont un antigène interne commun avec les Myxovirus influenzae B",
+      "Entrent dans la composition des vaccins grippaux",
+      "Toutes ces propositions sont justes"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "ARN monocaténaire négatif en 8 segments ; glissements et cassures des antigènes d'enveloppe. L'antigène interne RNP est spécifique de type (A, B ou C), donc non commun entre A et B."
+  },
+  {
+    "id": "s2-mic-37",
+    "module": "Microbiologie",
+    "text": "La recherche du bacille de Koch à l'examen microscopique d'une expectoration chez un sujet suspect de tuberculose pulmonaire se fait :",
+    "choices": [
+      "Par immunofluorescence directe",
+      "Par immunofluorescence indirecte",
+      "Par coloration de Ziehl-Neelsen",
+      "Par coloration fluorescente à l'auramine",
+      "Par coloration de Gram"
+    ],
+    "correct": [2, 3],
+    "explanation": "Ziehl-Neelsen à chaud : bacilles rouges, acido-alcoolo-résistants (BAAR). À l'auramine, les bacilles apparaissent fluorescents jaunes."
+  },
+  {
+    "id": "s2-mic-38",
+    "module": "Microbiologie",
+    "text": "Parmi les caractères suivants, indiquez celui ou ceux qui s'appliquent aux streptocoques :",
+    "choices": [
+      "Ce sont des cocci",
+      "Ils sont Gram négatif",
+      "Ils sont aérobies stricts",
+      "Ils se présentent en chaînettes",
+      "Ils possèdent une oxydase"
+    ],
+    "correct": [0, 3],
+    "explanation": "Corrigé : les streptocoques sont des cocci Gram POSITIF en chaînettes, aéro-anaérobies facultatifs, catalase − et oxydase −. (La correction du document source « A B C » est erronée.)"
+  },
+  {
+    "id": "s2-mic-39",
+    "module": "Microbiologie",
+    "text": "Le tétanos chez l'homme :",
+    "choices": [
+      "Est dû à la sécrétion par le germe d'une hémolysine",
+      "Est dû à la diffusion par voie sanguine d'une exotoxine",
+      "L'hémoculture y est positive dans 60 % des cas environ",
+      "Les produits provenant de la destruction des cellules par le germe au niveau de la plaie sont très toxiques",
+      "La lyse des germes microbiens amène une intoxication générale de l'organisme"
+    ],
+    "correct": [1],
+    "explanation": "Toxi-infection : le germe reste au niveau de la plaie et sécrète la tétanospasmine (exotoxine) qui diffuse et bloque les interneurones inhibiteurs. Hémoculture négative."
+  },
+  {
+    "id": "s2-imm-40",
+    "module": "Immunologie",
+    "text": "Les propositions suivantes sont exactes sauf une. Laquelle ?",
+    "choices": [
+      "L'injection d'anatoxine tétanique confère une immunité active",
+      "L'administration d'une seule injection de sérum antitétanique donne une immunité passive immédiate",
+      "La vaccination antitétanique est obligatoire en France",
+      "Le vaccin antitétanique doit être injecté à l'homme dans des conditions strictes d'anaérobiose",
+      "Après une primo-vaccination, un rappel doit être effectué au bout de 5 ans pour maintenir l'état d'immunité"
+    ],
+    "correct": [3],
+    "explanation": "L'anaérobiose n'a aucun sens pour l'injection d'un vaccin (anatoxine) : il se conserve au frais et s'injecte normalement. Les autres propositions correspondent au corrigé de l'annale."
+  },
+  {
+    "id": "s2-imm-41",
+    "module": "Immunologie",
+    "text": "Parmi les affirmations suivantes, laquelle (lesquelles) peut (peuvent) caractériser le vaccin antigrippal ?",
+    "choices": [
+      "Vaccin obligatoire",
+      "Mélange de virus A et B inactivé",
+      "Confère une immunité définitive",
+      "S'administre par voie sous-cutanée",
+      "Est contre-indiqué en cas d'allergie à l'œuf"
+    ],
+    "correct": [1, 3, 4],
+    "explanation": "Recommandé (pas obligatoire) pour les sujets à risque ; virus A et B inactivés ; revaccination chaque année ; contre-indiqué en cas d'allergie vraie à l'œuf (culture sur œuf embryonné)."
+  },
+  {
+    "id": "s2-mic-42",
+    "module": "Microbiologie",
+    "text": "Indiquez la ou les réponses exactes concernant l'herpès du nouveau-né :",
+    "choices": [
+      "Il est le plus souvent consécutif à une infection herpétique génitale de la mère",
+      "La cause la plus fréquente en est une primo-infection génitale maternelle apparente contractée durant le mois précédant l'accouchement",
+      "Il est le plus souvent sans manifestations cliniques",
+      "Il a pour manifestation clinique la plus fréquente des malformations congénitales",
+      "Le taux de mortalité peut en être réduit par chimiothérapie antivirale"
+    ],
+    "correct": [0, 4],
+    "explanation": "Contamination surtout à l'accouchement (filière génitale), le plus souvent par une récurrence maternelle asymptomatique. L'herpès néonatal est rarement asymptomatique ; les antiviraux réduisent la mortalité."
+  },
+  {
+    "id": "s2-mic-43",
+    "module": "Microbiologie",
+    "text": "On isole plus souvent le type 1 de l'herpès simplex virus que le type 2 au cours de :",
+    "choices": [
+      "La kératite herpétique",
+      "L'encéphalite aiguë nécrosante de l'adulte",
+      "L'herpès du nouveau-né",
+      "L'herpès labial",
+      "L'herpès génital"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "HSV 1 : atteintes « au-dessus de la ceinture » (labial, oculaire, encéphalite). HSV 2 : « au-dessous de la ceinture » (génital, et donc le plus souvent herpès néonatal)."
+  },
+  {
+    "id": "s2-mic-44",
+    "module": "Microbiologie",
+    "text": "Lors du diagnostic sérologique de la syphilis, Treponema pallidum est utilisé comme antigène au cours de :",
+    "choices": ["TPHA", "Kline", "VDRL", "FTA", "Test de Nelson"],
+    "correct": [0, 3, 4],
+    "explanation": "Antigènes tréponémiques : TPHA, FTA-ABS, test d'immobilisation de Nelson. Kline et VDRL utilisent un antigène cardiolipidique (non tréponémique)."
+  },
+  {
+    "id": "s2-mic-45",
+    "module": "Microbiologie",
+    "text": "Bactéries fréquemment impliquées dans les syndromes diarrhéiques et dont l'action pathogène résulte de la sécrétion d'une toxine entérotrope :",
+    "choices": ["Vibrion cholérique", "Staphylocoque doré", "Certains Escherichia coli", "Shigella"],
+    "correct": [0, 1, 2],
+    "explanation": "Vibrion cholérique, E. coli entérotoxinogènes et certains staphylocoques agissent par entérotoxine (diarrhée aqueuse). Shigella est une bactérie invasive (syndrome dysentérique)."
+  },
+  {
+    "id": "s2-imm-46",
+    "module": "Immunologie",
+    "text": "L'injection de B.C.G. a pour effet de :",
+    "choices": [
+      "Prévenir la contamination par le bacille de Koch",
+      "Empêcher la contagion des malades",
+      "Conférer une totale immunité de surinfection",
+      "Protéger contre la méningite tuberculeuse",
+      "Induire des anticorps protéiques protecteurs"
+    ],
+    "correct": [3],
+    "explanation": "Le BCG induit une immunité à médiation cellulaire, partielle, qui protège surtout contre les formes disséminées (miliaire, méningite tuberculeuse). Les anticorps produits ne sont pas protecteurs."
+  }
+]

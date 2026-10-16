@@ -13,7 +13,7 @@ function readPreset(route) {
 function quickSession({ questions, settings }, preset) {
   const pool = preset.module ? questions.filter((q) => moduleOf(q) === preset.module) : questions;
   if (!pool.length) return null;
-  const items = buildItems(pool, { shuffleQuestions: true, shuffleChoices: false }).slice(0, preset.count || 20);
+  const items = buildItems(pool, { shuffleQuestions: true, shuffleChoices: false }).slice(0, preset.count || 30);
   return { items, secondsPerQuestion: settings.secondsPerQuestion };
 }
 
@@ -127,7 +127,7 @@ function Setup({ questions, settings, history, initialModule, onStart }) {
   const [selected, setSelected] = useState(() =>
     modules.some((m) => m.name === initialModule) ? [initialModule] : modules.map((m) => m.name),
   );
-  const [count, setCount] = useState(Math.min(20, questions.length));
+  const [count, setCount] = useState(Math.min(30, questions.length));
   const [seconds, setSeconds] = useState(settings.secondsPerQuestion ?? 90);
   const [shuffleQuestions, setShuffleQuestions] = useState(true);
   const [shuffleChoices, setShuffleChoices] = useState(false);

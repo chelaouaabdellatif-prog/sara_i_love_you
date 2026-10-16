@@ -1,0 +1,134 @@
+[
+  {
+    "id": "s2-ana-01",
+    "module": "Chimie analytique",
+    "text": "La loi de Beer-Lambert :",
+    "choices": [
+      "Indique que l'absorbance est proportionnelle à la concentration",
+      "N'est valable que pour des solutions diluées",
+      "S'applique en lumière polychromatique",
+      "S'écrit A = log (I₀ / I) = ε · l · c",
+      "Indique que la transmittance est proportionnelle à la concentration"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "A = ε·l·c, valable en lumière monochromatique et pour des solutions diluées. La transmittance T = I/I₀ décroît de façon exponentielle avec c (A = −log T)."
+  },
+  {
+    "id": "s2-ana-02",
+    "module": "Chimie analytique",
+    "text": "Le pH d'une solution d'acide chlorhydrique à 0,01 mol/L est égal à :",
+    "choices": ["1", "2", "3", "7", "12"],
+    "correct": [1],
+    "explanation": "HCl est un acide fort, totalement dissocié : [H₃O⁺] = 10⁻² mol/L, donc pH = −log(10⁻²) = 2."
+  },
+  {
+    "id": "s2-ana-03",
+    "module": "Chimie analytique",
+    "text": "La zone de virage de la phénolphtaléine se situe vers :",
+    "choices": ["pH 3,1 – 4,4", "pH 4,2 – 6,2", "pH 6,0 – 7,6", "pH 8,2 – 10", "pH 11 – 12"],
+    "correct": [3],
+    "explanation": "Phénolphtaléine : incolore → rose entre pH 8,2 et 10. Hélianthine 3,1–4,4 ; rouge de méthyle 4,2–6,2 ; bleu de bromothymol 6,0–7,6."
+  },
+  {
+    "id": "s2-ana-04",
+    "module": "Chimie analytique",
+    "text": "Une solution tampon :",
+    "choices": [
+      "Est constituée d'un acide faible et de sa base conjuguée",
+      "A un pH donné par la relation pH = pKa + log ([A⁻] / [AH])",
+      "A un pouvoir tampon maximal quand pH = pKa",
+      "Est constituée d'un acide fort et d'une base forte",
+      "A un pH qui ne varie pas du tout, quelle que soit la quantité d'acide ajoutée"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "Relation d'Henderson-Hasselbalch. Le pH varie peu lors d'un ajout modéré d'acide, de base ou d'une dilution ; le pouvoir tampon est maximal quand [A⁻] = [AH]."
+  },
+  {
+    "id": "s2-ana-05",
+    "module": "Chimie analytique",
+    "text": "En chromatographie sur couche mince, le rapport frontal Rf est :",
+    "choices": [
+      "La distance parcourue par la substance divisée par la distance parcourue par le front du solvant",
+      "La distance parcourue par le solvant divisée par celle parcourue par la substance",
+      "Toujours supérieur à 1",
+      "Le temps de rétention de la substance",
+      "Indépendant de la nature de la phase mobile"
+    ],
+    "correct": [0],
+    "explanation": "Rf = d(substance) / d(front du solvant), compris entre 0 et 1 ; il dépend de la phase stationnaire, de la phase mobile et de la température."
+  },
+  {
+    "id": "s2-ana-06",
+    "module": "Chimie analytique",
+    "text": "La méthode de Karl Fischer permet de doser :",
+    "choices": ["L'eau", "L'azote total", "Les chlorures", "Le calcium", "Le glucose"],
+    "correct": [0],
+    "explanation": "Le réactif de Karl Fischer (iode, SO₂, base, méthanol) réagit avec l'eau : dosage de l'humidité (titrage volumétrique ou coulométrique)."
+  },
+  {
+    "id": "s2-ana-07",
+    "module": "Chimie analytique",
+    "text": "La détermination de la dureté de l'eau (Ca²⁺ et Mg²⁺) se fait :",
+    "choices": [
+      "Par complexométrie à l'EDTA",
+      "Par argentimétrie",
+      "En présence de noir ériochrome T comme indicateur",
+      "En milieu fortement acide (pH 1)",
+      "Par la méthode de Kjeldahl"
+    ],
+    "correct": [0, 2],
+    "explanation": "Titrage par l'EDTA en milieu tamponné à pH ≈ 10 (tampon ammoniacal) avec le noir ériochrome T, qui vire du rouge vineux au bleu."
+  },
+  {
+    "id": "s2-ana-08",
+    "module": "Chimie analytique",
+    "text": "La méthode de Kjeldahl permet de doser :",
+    "choices": ["L'azote (et donc les protéines)", "L'eau", "Le sodium", "Les sucres réducteurs", "Les lipides"],
+    "correct": [0],
+    "explanation": "Minéralisation par H₂SO₄ concentré (azote → NH₄⁺), distillation de NH₃ après alcalinisation, puis titrage acidimétrique. Protéines ≈ N × 6,25."
+  },
+  {
+    "id": "s2-ana-09",
+    "module": "Chimie analytique",
+    "text": "Pour mesurer un pH par potentiométrie, on utilise :",
+    "choices": [
+      "Une électrode de verre (électrode de mesure)",
+      "Une électrode de référence (calomel saturé ou Ag/AgCl)",
+      "Une électrode de platine seule",
+      "Un conductimètre",
+      "Un étalonnage avec des solutions tampons"
+    ],
+    "correct": [0, 1, 4],
+    "explanation": "Le pH-mètre mesure la différence de potentiel entre l'électrode de verre (sensible aux H₃O⁺) et une électrode de référence ; il s'étalonne avec des tampons de pH connu (ex. 4, 7, 10)."
+  },
+  {
+    "id": "s2-ana-10",
+    "module": "Chimie analytique",
+    "text": "Le domaine du visible en spectrophotométrie s'étend environ de :",
+    "choices": ["10 à 200 nm", "200 à 400 nm", "400 à 800 nm", "800 nm à 2,5 µm", "2,5 à 25 µm"],
+    "correct": [2],
+    "explanation": "UV lointain < 200 nm ; UV proche 200–400 nm ; visible ≈ 400–800 nm ; proche infrarouge ensuite, puis infrarouge moyen (2,5–25 µm)."
+  },
+  {
+    "id": "s2-ana-11",
+    "module": "Chimie analytique",
+    "text": "Dans la méthode de Mohr :",
+    "choices": [
+      "On dose les chlorures par le nitrate d'argent",
+      "L'indicateur est le chromate de potassium",
+      "Le dosage se fait en milieu fortement acide",
+      "L'indicateur est l'alun ferrique",
+      "La fin du dosage est marquée par un précipité rouge brique de chromate d'argent"
+    ],
+    "correct": [0, 1, 4],
+    "explanation": "Méthode de Mohr : milieu neutre ou faiblement basique (pH ≈ 6,5–10), AgCl précipite d'abord, puis Ag₂CrO₄ rouge brique à l'équivalence. L'alun ferrique est l'indicateur de la méthode de Volhard."
+  },
+  {
+    "id": "s2-ana-12",
+    "module": "Chimie analytique",
+    "text": "Une solution d'acide sulfurique H₂SO₄ à 1 mol/L a une normalité de :",
+    "choices": ["0,5 N", "1 N", "2 N", "3 N", "4 N"],
+    "correct": [2],
+    "explanation": "H₂SO₄ est un diacide : il libère 2 H⁺ par molécule, donc N = 2 × C = 2 N (2 éq/L)."
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "id": "s2-bot-01",
+    "module": "Botanique",
+    "text": "Un thalle levuriforme est un thalle :",
+    "choices": ["Unicellulaire", "Filamenteux cloisonné", "Filamenteux siphonné", "Pluricellulaire massif", "Formant un sclérote"],
+    "correct": [0],
+    "explanation": "Thalle levuriforme = cellules isolées (levures), se multipliant par bourgeonnement ou scission. Ex. : Saccharomyces, Candida."
+  },
+  {
+    "id": "s2-bot-02",
+    "module": "Botanique",
+    "text": "Le sclérote :",
+    "choices": [
+      "Est une fructification",
+      "Est un plectenchyme (filaments mycéliens enchevêtrés et soudés)",
+      "Est un organe de résistance et de conservation",
+      "Est une spore asexuée",
+      "Exemple : l'ergot du seigle (Claviceps purpurea)"
+    ],
+    "correct": [1, 2, 4],
+    "explanation": "Le sclérote est une masse compacte et dure de mycélium (plectenchyme) qui permet au champignon de survivre aux conditions défavorables. Ce n'est ni une fructification ni une spore."
+  },
+  {
+    "id": "s2-bot-03",
+    "module": "Botanique",
+    "text": "Les flavonoïdes sont :",
+    "choices": [
+      "Des composés phénoliques",
+      "Des alcaloïdes",
+      "Des terpènes",
+      "Des stérols",
+      "Des pigments végétaux, souvent jaunes"
+    ],
+    "correct": [0, 4],
+    "explanation": "Polyphénols à squelette C6-C3-C6 (2-phénylchromane), souvent sous forme d'hétérosides ; pigments jaunes (flavus = jaune). Ex. : quercétine, rutine."
+  },
+  {
+    "id": "s2-bot-04",
+    "module": "Botanique",
+    "text": "La génine d'un hétéroside correspond à :",
+    "choices": [
+      "La partie osidique (sucre)",
+      "La partie non osidique (aglycone)",
+      "Un holoside",
+      "L'enzyme qui hydrolyse l'hétéroside",
+      "Un alcaloïde"
+    ],
+    "correct": [1],
+    "explanation": "Hétéroside = ose(s) + génine (ou aglycone), la partie non sucrée qui porte en général l'activité pharmacologique. Un holoside ne contient que des oses."
+  },
+  {
+    "id": "s2-bot-05",
+    "module": "Botanique",
+    "text": "Un sporange est :",
+    "choices": [
+      "Un sac dans lequel se forment des spores endogènes (sporangiospores)",
+      "Une spore de résistance à paroi épaisse",
+      "Une cellule qui produit des conidies exogènes",
+      "Un gamétange femelle",
+      "Une masse de mycélium durcie"
+    ],
+    "correct": [0],
+    "explanation": "Le sporange, porté par un sporangiophore, contient des spores formées à l'intérieur (endospores). Caractéristique des Mucorales (Mucor, Rhizopus). Les conidies, elles, sont exogènes."
+  },
+  {
+    "id": "s2-bot-06",
+    "module": "Botanique",
+    "text": "Les chlamydospores sont :",
+    "choices": [
+      "Des spores de résistance asexuées",
+      "Formées par différenciation d'un article du mycélium, à paroi épaisse",
+      "Des spores sexuées formées dans un asque",
+      "Des spores formées dans un sporange",
+      "Observées chez Candida albicans (test de chlamydosporulation)"
+    ],
+    "correct": [0, 1, 4],
+    "explanation": "Les chlamydospores sont des cellules mycéliennes (terminales ou intercalaires) qui grossissent et épaississent leur paroi : spores de résistance asexuées. Leur recherche sert à identifier Candida albicans."
+  },
+  {
+    "id": "s2-bot-07",
+    "module": "Botanique",
+    "text": "Les phialides sont :",
+    "choices": [
+      "Des cellules conidiogènes en forme de bouteille",
+      "Produisant des conidies (phialospores) à leur extrémité",
+      "Caractéristiques des genres Aspergillus et Penicillium",
+      "Des sacs contenant des spores endogènes",
+      "Des gamétanges mâles"
+    ],
+    "correct": [0, 1, 2],
+    "explanation": "La phialide forme des conidies successives à son sommet, en chaînettes. Chez Aspergillus, elles sont portées par une vésicule ; chez Penicillium, elles forment un pinceau."
+  },
+  {
+    "id": "s2-bot-08",
+    "module": "Botanique",
+    "text": "L'homothallisme désigne :",
+    "choices": [
+      "La possibilité pour un même thalle d'assurer seul sa reproduction sexuée",
+      "La nécessité de deux thalles de signes différents pour la reproduction sexuée",
+      "Une reproduction uniquement asexuée",
+      "La fusion de deux gamètes de taille différente",
+      "La fusion de deux thalles entiers"
+    ],
+    "correct": [0],
+    "explanation": "Thalle homothallique = autofertile : les gamétanges compatibles sont produits par le même mycélium. L'inverse est l'hétérothallisme."
+  },
+  {
+    "id": "s2-bot-09",
+    "module": "Botanique",
+    "text": "L'hétérothallisme bipolaire :",
+    "choices": [
+      "Nécessite la rencontre de deux thalles de signes différents (+ et −)",
+      "Est contrôlé par un seul locus avec deux allèles",
+      "Permet à un thalle isolé de faire sa reproduction sexuée",
+      "Est contrôlé par deux loci indépendants",
+      "Exemple : Mucor mucedo"
+    ],
+    "correct": [0, 1, 4],
+    "explanation": "Bipolaire : un seul locus, deux allèles (+/−). Tétrapolaire : deux loci indépendants (fréquent chez les Basidiomycètes). Mucor mucedo est un exemple classique d'hétérothallisme."
+  },
+  {
+    "id": "s2-bot-10",
+    "module": "Botanique",
+    "text": "L'anisogamie :",
+    "choices": [
+      "Est la fusion de deux gamètes de taille différente",
+      "Est la fusion de deux gamètes identiques",
+      "Est la fusion d'un anthérozoïde avec une oosphère immobile",
+      "Est une forme de mérogamie",
+      "Est la fusion de deux thalles entiers"
+    ],
+    "correct": [0, 3],
+    "explanation": "Mérogamie : les gamètes sont des cellules différenciées issues de divisions. Selon leur taille : isogamie (identiques), anisogamie (tailles différentes, tous deux mobiles), oogamie (oosphère femelle immobile)."
+  },
+  {
+    "id": "s2-bot-11",
+    "module": "Botanique",
+    "text": "L'oogamie :",
+    "choices": [
+      "Est la fusion d'un gamète mâle (anthérozoïde) et d'un gamète femelle volumineux et immobile (oosphère)",
+      "Est la fusion de deux gamètes mobiles identiques",
+      "Est observée chez les Oomycètes",
+      "Aboutit à la formation d'une oospore",
+      "Est une reproduction asexuée"
+    ],
+    "correct": [0, 2, 3],
+    "explanation": "Le gamète femelle (oosphère) est contenu dans l'oogone ; après fécondation, il donne une oospore. Exemple : Oomycètes (Saprolegnia, Phytophthora)."
+  },
+  {
+    "id": "s2-bot-12",
+    "module": "Botanique",
+    "text": "Mucor mucedo :",
+    "choices": [
+      "Est une moisissure blanche du pain",
+      "Possède un thalle siphonné (non cloisonné)",
+      "Est un Ascomycète",
+      "Est hétérothallique",
+      "Produit des conidies sur des phialides"
+    ],
+    "correct": [0, 1, 3],
+    "explanation": "Zygomycète (Mucorale) à thalle siphonné ; reproduction asexuée par sporangiospores, reproduction sexuée par zygospore entre thalles + et −. Les phialides concernent Aspergillus et Penicillium."
+  },
+  {
+    "id": "s2-bot-13",
+    "module": "Botanique",
+    "text": "Une dictyospore est une spore :",
+    "choices": [
+      "Cloisonnée transversalement et longitudinalement (muriforme)",
+      "Unicellulaire",
+      "Cloisonnée transversalement uniquement",
+      "Formée dans un sporange",
+      "Exemple : Alternaria"
+    ],
+    "correct": [0, 4],
+    "explanation": "Amérospore : sans cloison ; didymospore : 1 cloison ; phragmospore : plusieurs cloisons transversales ; dictyospore : cloisons transversales et longitudinales (Alternaria)."
+  },
+  {
+    "id": "s2-bot-14",
+    "module": "Botanique",
+    "text": "La quercétine :",
+    "choices": ["Est un flavonoïde (flavonol)", "Est un alcaloïde", "Est la génine de la rutine", "Est une coumarine", "Est un stéroïde"],
+    "correct": [0, 2],
+    "explanation": "La quercétine est un flavonol ; la rutine est son hétéroside (quercétine + rutinose), utilisée comme veinotonique."
+  },
+  {
+    "id": "s2-bot-15",
+    "module": "Botanique",
+    "text": "L'ascogone :",
+    "choices": [
+      "Est le gamétange femelle des Ascomycètes",
+      "Est le gamétange mâle des Ascomycètes",
+      "Porte un trichogyne qui reçoit les noyaux de l'anthéridie",
+      "Est une spore asexuée",
+      "Est un organe des Basidiomycètes"
+    ],
+    "correct": [0, 2],
+    "explanation": "Chez les Ascomycètes, l'ascogone (femelle) reçoit par son trichogyne les noyaux de l'anthéridie (mâle). Les hyphes ascogènes qui en sont issues forment les asques."
+  }
+]

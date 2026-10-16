@@ -100,6 +100,9 @@ export default function Home({ data }) {
             <a href="#/sara" className="btn btn-light btn-lg">
               Commencer une séance
             </a>
+            <a href="#/sara?n=30&start=1" className="btn btn-outline-light btn-lg">
+              Examen blanc · 30 QCM
+            </a>
             <a href="#/sara?n=10&start=1" className="btn btn-outline-light btn-lg">
               Séance rapide · 10 QCM
             </a>

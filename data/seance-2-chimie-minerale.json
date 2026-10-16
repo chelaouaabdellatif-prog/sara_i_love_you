@@ -1,0 +1,270 @@
+[
+  {
+    "id": "s2-min-01",
+    "module": "Chimie minérale",
+    "text": "Lors de la préparation de la soude par électrolyse (d'une solution de NaCl), il y a :",
+    "choices": [
+      "Dégagement de soude à l'anode",
+      "Dégagement de soude à la cathode",
+      "Formation directe de soude à l'anode",
+      "Formation directe de soude à la cathode",
+      "Formation d'hypochlorite de sodium à la cathode"
+    ],
+    "correct": [3],
+    "explanation": "À la cathode : 2 H₂O + 2 e⁻ → H₂ + 2 OH⁻ ; avec Na⁺, la soude se forme dans le compartiment cathodique. À l'anode se dégage Cl₂. La soude n'est pas un gaz (pas de « dégagement »)."
+  },
+  {
+    "id": "s2-min-02",
+    "module": "Chimie minérale",
+    "text": "Un oxyde amphotère :",
+    "choices": [
+      "Est insoluble dans l'eau et soluble dans les acides forts et les bases fortes",
+      "Est soluble dans l'eau et dans les acides forts et les bases fortes",
+      "Est soluble dans les acides faibles et les bases faibles",
+      "Est un composé dont le sel d'acide fort est insoluble dans l'eau",
+      "Est un composé dont le sel de base forte est insoluble dans l'eau"
+    ],
+    "correct": [0],
+    "explanation": "Ex. : Al₂O₃, ZnO. Insolubles dans l'eau, ils se dissolvent dans les acides forts (comportement basique) et dans les bases fortes (comportement acide : aluminates, zincates)."
+  },
+  {
+    "id": "s2-min-03",
+    "module": "Chimie minérale",
+    "text": "Le duralumin est un alliage composé d'aluminium et de :",
+    "choices": ["Cuivre", "Zinc", "Cuivre et magnésium", "Cuivre, magnésium et manganèse", "Cuivre et manganèse"],
+    "correct": [3],
+    "explanation": "Duralumin : Al (≈ 95 %) + Cu (≈ 4 %) + Mg et Mn (≈ 0,5 à 1 %). Léger et résistant (aéronautique)."
+  },
+  {
+    "id": "s2-min-04",
+    "module": "Chimie minérale",
+    "text": "Le fluorure d'aluminium est ionique alors que l'iodure d'aluminium est covalent car :",
+    "choices": [
+      "Le fluor est plus électronégatif que l'iode",
+      "L'iode, étant plus gros, est facilement polarisé par l'aluminium",
+      "L'iode est plus métallique que le fluor",
+      "L'aluminium est si gros qu'il polarise le fluor",
+      "Le fluor, étant plus petit, est facilement polarisé par l'aluminium"
+    ],
+    "correct": [0, 1],
+    "explanation": "Règles de Fajans : le petit cation Al³⁺, très polarisant, déforme facilement le gros anion I⁻ (liaison à caractère covalent). F⁻, petit et peu polarisable, très électronégatif, donne une liaison ionique."
+  },
+  {
+    "id": "s2-min-05",
+    "module": "Chimie minérale",
+    "text": "L'oxyde le plus basique est :",
+    "choices": ["BeO", "MgO", "CaO", "SrO"],
+    "correct": [3],
+    "explanation": "Dans le groupe 2, le caractère basique des oxydes augmente en descendant : BeO (amphotère) < MgO < CaO < SrO < BaO."
+  },
+  {
+    "id": "s2-min-06",
+    "module": "Chimie minérale",
+    "text": "Les métaux alcalins ne se trouvent pas dans la nature à l'état de corps simple car ils sont :",
+    "choices": [
+      "Très réactifs",
+      "Très électropositifs (réducteurs puissants)",
+      "Très électronégatifs",
+      "Très peu abondants dans l'écorce terrestre",
+      "Très volatils"
+    ],
+    "correct": [0, 1],
+    "explanation": "Avec un seul électron de valence (ns¹) facilement cédé, ils sont très électropositifs et très réactifs (avec l'eau, O₂…) : on les trouve uniquement combinés (NaCl, KCl…)."
+  },
+  {
+    "id": "s2-min-07",
+    "module": "Chimie minérale",
+    "text": "L'acide sulfurique est un agent :",
+    "choices": ["Sulfatant et sulfonant", "Réducteur puissant", "Basique", "Chlorurant", "Hydratant"],
+    "correct": [0],
+    "explanation": "H₂SO₄ est sulfatant (formation de sulfates, esters sulfuriques) et sulfonant (introduction du groupe –SO₃H sur les aromatiques). Concentré, il est aussi déshydratant et oxydant à chaud, jamais réducteur."
+  },
+  {
+    "id": "s2-min-08",
+    "module": "Chimie minérale",
+    "text": "Le phosphore est retrouvé dans la nature à l'état :",
+    "choices": [
+      "De phosphates (apatites, phosphorites)",
+      "De corps simple (phosphore blanc)",
+      "De phosphures métalliques",
+      "De phosphine gazeuse",
+      "D'acide phosphorique libre"
+    ],
+    "correct": [0],
+    "explanation": "Trop réactif pour exister à l'état libre, le phosphore est présent sous forme de phosphates de calcium : phosphorites Ca₃(PO₄)₂ et apatites (fluoroapatite Ca₅(PO₄)₃F)."
+  },
+  {
+    "id": "s2-min-09",
+    "module": "Chimie minérale",
+    "text": "L'acide orthophosphorique H₃PO₄ peut être préparé :",
+    "choices": [
+      "Par action de l'acide sulfurique sur le phosphate tricalcique (voie humide)",
+      "Par hydratation de l'anhydride phosphorique P₄O₁₀ obtenu par combustion du phosphore (voie thermique)",
+      "Par action de l'acide chlorhydrique sur le phosphore blanc",
+      "Par électrolyse du phosphate de sodium",
+      "Par réduction de l'acide phosphoreux par l'hydrogène"
+    ],
+    "correct": [0, 1],
+    "explanation": "Voie humide : Ca₃(PO₄)₂ + 3 H₂SO₄ → 2 H₃PO₄ + 3 CaSO₄. Voie thermique (acide plus pur) : P₄ + 5 O₂ → P₄O₁₀, puis P₄O₁₀ + 6 H₂O → 4 H₃PO₄."
+  },
+  {
+    "id": "s2-min-10",
+    "module": "Chimie minérale",
+    "text": "Concernant les éléments du groupe 13 (B, Al, Ga, In, Tl) :",
+    "choices": [
+      "Ce sont tous des métaux",
+      "Leur configuration électronique externe est ns² np¹",
+      "Al, Ga, In et Tl sont des métaux à éclat argenté",
+      "Le bore est un métalloïde",
+      "Le degré d'oxydation +1 devient plus stable en descendant le groupe (thallium)"
+    ],
+    "correct": [1, 2, 3, 4],
+    "explanation": "Le bore est un métalloïde ; les autres sont des métaux blancs-argentés, assez mous. Degré d'oxydation +3 habituel ; +1 de plus en plus stable vers le bas (effet de la paire inerte, Tl⁺)."
+  },
+  {
+    "id": "s2-min-11",
+    "module": "Chimie minérale",
+    "text": "Le dioxyde de carbone CO₂ :",
+    "choices": [
+      "Est un oxyde acide (anhydride carbonique)",
+      "Est soluble dans l'eau",
+      "Est combustible",
+      "Est plus léger que l'air",
+      "Est une molécule linéaire apolaire"
+    ],
+    "correct": [0, 1, 4],
+    "explanation": "CO₂ se dissout dans l'eau en donnant l'acide carbonique H₂CO₃ (acide faible). Il est ininflammable (extincteurs), plus dense que l'air, linéaire O=C=O donc apolaire."
+  },
+  {
+    "id": "s2-min-12",
+    "module": "Chimie minérale",
+    "text": "L'acide nitrique HNO₃ :",
+    "choices": [
+      "Est un réducteur",
+      "Est totalement dissocié dans l'eau (acide fort)",
+      "N'est que partiellement dissocié dans l'eau",
+      "Est un oxydant puissant",
+      "Concentré, il passive le fer"
+    ],
+    "correct": [1, 3, 4],
+    "explanation": "HNO₃ est un acide fort (dissociation totale en solution diluée) et un oxydant puissant (attaque Cu, Ag). Concentré, il rend le fer, le chrome et l'aluminium passifs (couche d'oxyde protectrice)."
+  },
+  {
+    "id": "s2-min-13",
+    "module": "Chimie minérale",
+    "text": "La soude NaOH :",
+    "choices": [
+      "Est un solide blanc très hygroscopique (déliquescent)",
+      "Est une base forte",
+      "Absorbe le CO₂ de l'air en se carbonatant",
+      "Est peu soluble dans l'eau",
+      "Est préparée industriellement par électrolyse d'une solution de NaCl"
+    ],
+    "correct": [0, 1, 2, 4],
+    "explanation": "NaOH est très soluble dans l'eau (dissolution très exothermique). Il fixe l'eau et le CO₂ atmosphériques (formation de Na₂CO₃) : on le conserve en flacon bien fermé."
+  },
+  {
+    "id": "s2-min-14",
+    "module": "Chimie minérale",
+    "text": "Dans une même période, le plus grand diamètre atomique appartient aux :",
+    "choices": ["Métaux alcalins", "Métaux alcalino-terreux", "Halogènes", "Gaz rares", "Chalcogènes"],
+    "correct": [0],
+    "explanation": "Le rayon atomique diminue de gauche à droite dans une période (la charge nucléaire effective augmente) : les alcalins (groupe 1) sont les plus gros."
+  },
+  {
+    "id": "s2-min-15",
+    "module": "Chimie minérale",
+    "text": "Le magnésium brûle dans l'air en donnant :",
+    "choices": ["MgO₂", "MgO et Mg₃N₂", "Mg₂O et Mg₂N₃", "MgO uniquement", "Mg(OH)₂"],
+    "correct": [1],
+    "explanation": "Combustion très lumineuse : 2 Mg + O₂ → 2 MgO, et avec l'azote de l'air : 3 Mg + N₂ → Mg₃N₂ (nitrure de magnésium)."
+  },
+  {
+    "id": "s2-min-16",
+    "module": "Chimie minérale",
+    "text": "La classification de Mendeleïev est basée sur :",
+    "choices": [
+      "Le numéro atomique",
+      "La masse atomique croissante",
+      "Les formules des combinaisons avec l'hydrogène et l'oxygène (valence)",
+      "La configuration électronique",
+      "Le numéro atomique et la masse atomique"
+    ],
+    "correct": [1, 2],
+    "explanation": "Mendeleïev (1869) a classé les éléments par masse atomique croissante en regroupant ceux qui ont des propriétés chimiques semblables (formules des hydrures et des oxydes). Le classement par numéro atomique date de Moseley (1913)."
+  },
+  {
+    "id": "s2-min-17",
+    "module": "Chimie minérale",
+    "text": "Le rayon atomique covalent est :",
+    "choices": [
+      "La moitié de la distance entre les noyaux de deux atomes identiques unis par une liaison covalente simple",
+      "La distance entre le noyau et l'électron le plus externe d'un atome isolé",
+      "La moitié de la distance entre deux atomes non liés au contact (van der Waals)",
+      "Le rayon de l'ion formé par l'atome",
+      "La distance entre deux noyaux dans un cristal métallique"
+    ],
+    "correct": [0],
+    "explanation": "Ex. : H₂, d(H–H) = 74 pm, donc rayon covalent de H ≈ 37 pm. À distinguer du rayon de van der Waals (atomes non liés), du rayon ionique et du rayon métallique."
+  },
+  {
+    "id": "s2-min-18",
+    "module": "Chimie minérale",
+    "text": "La (première) énergie d'ionisation est l'énergie nécessaire pour enlever un électron à :",
+    "choices": [
+      "Un cation",
+      "Une molécule polyatomique",
+      "Un atome à l'état solide",
+      "Un atome à l'état gazeux",
+      "Un atome en solution aqueuse"
+    ],
+    "correct": [3],
+    "explanation": "X(g) → X⁺(g) + e⁻ : atome isolé, à l'état gazeux et dans son état fondamental. Les énergies d'ionisation suivantes concernent ensuite les cations."
+  },
+  {
+    "id": "s2-min-19",
+    "module": "Chimie minérale",
+    "text": "La préparation du magnésium se fait à partir de :",
+    "choices": ["Dolomite", "Magnésite", "Kiésérite", "Calcite", "Schoenite"],
+    "correct": [0, 1],
+    "explanation": "Minerais de magnésium : dolomite CaMg(CO₃)₂ (procédé Pidgeon, réduction par le ferrosilicium) et magnésite MgCO₃ (aussi carnallite et eau de mer, électrolyse de MgCl₂ fondu). La calcite CaCO₃ ne contient pas de Mg."
+  },
+  {
+    "id": "s2-min-20",
+    "module": "Chimie minérale",
+    "text": "Le dioxyde de chlore ClO₂ est l'anhydride (mixte) de :",
+    "choices": ["HClO", "HClO₂", "HClO₃", "HClO₄", "HClO₅"],
+    "correct": [1, 2],
+    "explanation": "Le chlore y est au degré +IV : ClO₂ se dismute en milieu basique en chlorite (+III) et chlorate (+V) : 2 ClO₂ + 2 OH⁻ → ClO₂⁻ + ClO₃⁻ + H₂O. HClO₅ n'existe pas."
+  },
+  {
+    "id": "s2-min-21",
+    "module": "Chimie minérale",
+    "text": "La solution de Dakin est utilisée comme :",
+    "choices": ["Antiseptique", "Antibiotique", "Anesthésique local", "Antiacide", "Conservateur alimentaire"],
+    "correct": [0],
+    "explanation": "Le Dakin est une solution diluée d'hypochlorite de sodium (NaClO), stabilisée et colorée par le permanganate de potassium : antiseptique de la peau et des plaies."
+  },
+  {
+    "id": "s2-min-22",
+    "module": "Chimie minérale",
+    "text": "Dans le procédé Solvay, la chaux éteinte (utilisée pour régénérer l'ammoniac) a pour formule :",
+    "choices": ["Ca(OH)₂", "CaOH₂", "(CaOH)₂", "CaO"],
+    "correct": [0],
+    "explanation": "Chaux vive = CaO ; chaux éteinte = Ca(OH)₂ (CaO + H₂O). Le procédé Solvay fabrique Na₂CO₃ ; la chaux éteinte réagit avec NH₄Cl pour récupérer NH₃ (sous-produit : CaCl₂)."
+  },
+  {
+    "id": "s2-min-23",
+    "module": "Chimie minérale",
+    "text": "La passivation d'un métal est :",
+    "choices": [
+      "La formation d'une couche d'oxyde mince, adhérente et protectrice",
+      "Une dissolution accélérée du métal",
+      "Le dépôt électrolytique d'un métal plus noble",
+      "La formation d'une rouille poreuse non adhérente",
+      "La réduction du métal par l'hydrogène"
+    ],
+    "correct": [0],
+    "explanation": "État du métal dans lequel la vitesse de corrosion est fortement diminuée grâce à un film passif (oxyde adhérent). Ex. : Al, Cr, inox, fer plongé dans HNO₃ concentré."
+  }
+]
