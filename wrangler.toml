@@ -1,0 +1,9 @@
+# Configuration Cloudflare Pages (lue par wrangler et par Cloudflare)
+name = "sara-i-love-you"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-09-01"
+
+# Stockage des questions
+[[kv_namespaces]]
+binding = "QCM_KV"
+id = "7653c65e657b477cb63c3045169d42b8"
