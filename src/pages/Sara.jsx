@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
+import { saveResult, todayInAlgiers } from '../api.js';
 import { HISTORY_KEY, LETTERS, countByModule, formatTime, moduleOf, sameSet, shuffle, storage } from '../utils.js';
 
 const TIME_OPTIONS = [30, 45, 60, 90, 120, 180, 0];
@@ -25,7 +26,27 @@ function buildItems(questions, { shuffleQuestions, shuffleChoices }) {
   });
 }
 
-export default function Sara({ data, route }) {
+// Copie figée du test (les questions peuvent être modifiées plus tard dans l'admin).
+// Les lettres suivent l'ordre affiché à Sara.
+function toSavedSession(entry, answers) {
+  return {
+    ...entry,
+    modules: [...new Set(answers.map((a) => moduleOf(a.item.q)))],
+    answers: answers.map(({ item, selected, isCorrect, timedOut }) => ({
+      module: moduleOf(item.q),
+      text: item.q.text,
+      choices: item.order.map((i) => item.q.choices[i]),
+      correct: item.order.flatMap((orig, pos) => (item.q.correct.includes(orig) ? [pos] : [])),
+      selected: item.order.flatMap((orig, pos) => (selected.includes(orig) ? [pos] : [])),
+      isCorrect,
+      timedOut,
+      explanation: item.q.explanation || '',
+    })),
+  };
+}
+
+export default function Sara({ data, route, password }) {
+  const [saveState, setSaveState] = useState(null); // 'saving' | 'saved' | 'error'
   const [preset] = useState(() => readPreset(route));
   const [session, setSession] = useState(() => (preset.start ? quickSession(data, preset) : null));
   const [phase, setPhase] = useState(() => (session ? 'play' : 'setup'));
@@ -58,6 +79,12 @@ export default function Sara({ data, route }) {
     const next = [entry, ...history].slice(0, 15);
     setHistory(next);
     storage.set(HISTORY_KEY, next);
+
+    // Enregistrement en ligne sous la date du jour, avec le détail des réponses.
+    setSaveState('saving');
+    saveResult(password, todayInAlgiers(), toSavedSession(entry, res.answers))
+      .then(() => setSaveState('saved'))
+      .catch(() => setSaveState('error'));
   }
 
   if (!data.questions.length) {
@@ -76,6 +103,7 @@ export default function Sara({ data, route }) {
     return (
       <Results
         result={result}
+        saveState={saveState}
         onRestart={() => setPhase('setup')}
         onRetryWrong={(items) => start({ ...session, items: shuffle(items) })}
       />
@@ -440,7 +468,13 @@ function TimerRing({ remaining, limit }) {
 
 /* ---------- Résultats ---------- */
 
-function Results({ result, onRestart, onRetryWrong }) {
+const SAVE_LABELS = {
+  saving: ['status-saving', 'Enregistrement du test…'],
+  saved: ['status-ok', 'Test enregistré dans l’historique ✓'],
+  error: ['status-error', 'Test non enregistré en ligne (connexion ?)'],
+};
+
+function Results({ result, saveState, onRestart, onRetryWrong }) {
   const [showAll, setShowAll] = useState(false);
   const { answers, totalSeconds } = result;
   const score = answers.filter((a) => a.isCorrect).length;
@@ -474,6 +508,12 @@ function Results({ result, onRestart, onRetryWrong }) {
           <p className="muted">
             Temps total {formatTime(totalSeconds)} · moyenne {total ? Math.round(totalSeconds / total) : 0} s / question
           </p>
+          {SAVE_LABELS[saveState] && (
+            <p>
+              <span className={`status ${SAVE_LABELS[saveState][0]}`}>{SAVE_LABELS[saveState][1]}</span>{' '}
+              {saveState === 'saved' && <a href="#/historique">Voir l’historique</a>}
+            </p>
+          )}
           <div className="form-actions">
             <button className="btn btn-primary" onClick={onRestart}>
               Nouvelle séance

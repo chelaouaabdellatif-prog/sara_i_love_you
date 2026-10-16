@@ -19,6 +19,9 @@ export default function Header({ route, settings }) {
         <a href="#/sara" className={route.startsWith('/sara') ? 'active' : ''}>
           Espace Sara
         </a>
+        <a href="#/historique" className={route.startsWith('/historique') ? 'active' : ''}>
+          Historique
+        </a>
         <a href="#/admin" className={route.startsWith('/admin') ? 'active' : ''}>
           Admin
         </a>

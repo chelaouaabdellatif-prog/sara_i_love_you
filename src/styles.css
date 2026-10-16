@@ -722,6 +722,106 @@ textarea {
   background: var(--accent-100);
 }
 
+/* ---------- Historique ---------- */
+.back-link {
+  display: inline-block;
+  color: var(--accent-700);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.first-up::first-letter {
+  text-transform: uppercase;
+}
+.day-list,
+.test-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.day-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  transition: transform 0.15s, border-color 0.15s;
+}
+.day-card:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-200);
+}
+.day-date {
+  display: flex;
+  flex-direction: column;
+}
+.day-date strong {
+  color: var(--primary-900);
+}
+.day-date strong::first-letter {
+  text-transform: uppercase;
+}
+.day-score {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: none;
+}
+.day-score .bar-track {
+  width: 120px;
+}
+.day-score .bar-track span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-600), var(--accent-500));
+}
+.score-badge {
+  display: inline-block;
+  min-width: 3.4rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+.score-badge.good {
+  background: var(--good-bg);
+}
+.score-badge.bad {
+  background: var(--bad-bg);
+}
+.test-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+.test-main {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+.test-time {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary-900);
+  font-variant-numeric: tabular-nums;
+}
+.test-summary {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.test-summary .big-score {
+  width: 96px;
+  height: 96px;
+  font-size: 1.5rem;
+  border-width: 6px;
+}
+
 /* ---------- Choix du thème (admin) ---------- */
 .theme-picker {
   display: grid;
@@ -1398,6 +1498,24 @@ textarea {
   }
   .announce {
     font-size: 0.88rem;
+  }
+  .nav {
+    overflow-x: auto;
+  }
+  .day-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .day-score .bar-track {
+    flex: 1;
+    width: auto;
+  }
+  .test-summary {
+    flex-direction: column;
+    text-align: center;
+  }
+  .test-summary .tags {
+    justify-content: center;
   }
   .grid-2 {
     grid-template-columns: 1fr;

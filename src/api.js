@@ -78,3 +78,76 @@ export async function saveData(data, password) {
     throw new Error(body.error || `Erreur ${res.status}`);
   }
 }
+
+/* ---------- Résultats des tests, rangés par jour ---------- */
+
+const LOCAL_RESULTS_KEY = 'qcm-local-results';
+
+// Date du jour à Alger, au format AAAA-MM-JJ.
+export const todayInAlgiers = () => new Date().toLocaleDateString('en-CA', { timeZone: 'Africa/Algiers' });
+
+function readLocalResults() {
+  try {
+    return JSON.parse(localStorage.getItem(LOCAL_RESULTS_KEY)) || {};
+  } catch {
+    return {};
+  }
+}
+
+function daySummary(sessions) {
+  return sessions.reduce(
+    (s, x) => ({ count: s.count + 1, score: s.score + x.score, total: s.total + x.total, seconds: s.seconds + x.seconds }),
+    { count: 0, score: 0, total: 0, seconds: 0 },
+  );
+}
+
+async function resultsRequest(password, { method = 'GET', query = '', body } = {}) {
+  const res = await fetch(`/api/results${query}`, {
+    method,
+    headers: { 'content-type': 'application/json', 'x-password': password || '' },
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`);
+  return data;
+}
+
+export async function saveResult(password, day, session) {
+  if (localMode) {
+    const all = readLocalResults();
+    all[day] = [...(all[day] || []), { ...session, id: newLocalId() }];
+    localStorage.setItem(LOCAL_RESULTS_KEY, JSON.stringify(all));
+    return;
+  }
+  await resultsRequest(password, { method: 'POST', body: { day, session } });
+}
+
+export async function loadResultDays(password) {
+  if (localMode) {
+    return Object.entries(readLocalResults())
+      .filter(([, sessions]) => sessions.length)
+      .map(([day, sessions]) => ({ day, ...daySummary(sessions) }))
+      .sort((a, b) => b.day.localeCompare(a.day));
+  }
+  return (await resultsRequest(password)).days;
+}
+
+export async function loadResultDay(password, day) {
+  if (localMode) return readLocalResults()[day] || [];
+  return (await resultsRequest(password, { query: `?day=${encodeURIComponent(day)}` })).sessions;
+}
+
+export async function deleteResult(password, day, id) {
+  if (localMode) {
+    const all = readLocalResults();
+    all[day] = (all[day] || []).filter((s) => s.id !== id);
+    localStorage.setItem(LOCAL_RESULTS_KEY, JSON.stringify(all));
+    return;
+  }
+  await resultsRequest(password, {
+    method: 'DELETE',
+    query: `?day=${encodeURIComponent(day)}&id=${encodeURIComponent(id)}`,
+  });
+}
+
+const newLocalId = () => Date.now().toString(36) + Math.random().toString(36).slice(2);

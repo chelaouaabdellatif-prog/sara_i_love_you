@@ -11,6 +11,8 @@ Site React pour s'entraîner aux QCM du résidanat en pharmacie :
 - **Accueil pro** : compte à rebours jusqu'à l'examen, statistiques, cartes de modules (un clic lance une séance),
   séance rapide de 10 QCM.
 - **Thèmes** (Admin → Apparence & réglages) : *Bleu & rose*, *Bleu* ou *Rose*, appliqués sur tous les appareils.
+- **Historique** (`#/historique`) : chaque test terminé est enregistré en ligne à la date du jour (heure d'Alger),
+  avec les réponses de Sara ; consultation jour par jour et détail de chaque test (l'admin peut supprimer un test).
 - **Bannière d'annonce** en haut de la page, modifiable dans l'admin (message, lien, couleur, affichée ou non).
 - **Deux mots de passe** (jamais écrits dans le code, ils sont rangés dans Cloudflare) :
   `SARA_PASSWORD` pour entrer sur le site, `ADMIN_PASSWORD` pour modifier les questions.

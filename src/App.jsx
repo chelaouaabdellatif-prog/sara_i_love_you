@@ -5,6 +5,7 @@ import PasswordForm from './components/PasswordForm.jsx';
 import Home from './pages/Home.jsx';
 import Sara from './pages/Sara.jsx';
 import Admin from './pages/Admin.jsx';
+import History from './pages/History.jsx';
 import { AuthError, DEFAULT_SETTINGS, isLocalMode, loadData } from './api.js';
 import { storage } from './utils.js';
 
@@ -89,7 +90,9 @@ export default function App() {
   } else if (route.startsWith('/admin')) {
     page = <Admin data={data} onDataChange={setData} password={password} onLogin={login} />;
   } else if (route.startsWith('/sara')) {
-    page = <Sara key={route} data={data} route={route} />;
+    page = <Sara key={route} data={data} route={route} password={password} />;
+  } else if (route.startsWith('/historique')) {
+    page = <History route={route} password={password} isAdmin={data.role === 'admin'} />;
   } else {
     page = <Home data={data} />;
   }
