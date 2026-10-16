@@ -8,6 +8,10 @@ Site React pour s'entraîner aux QCM du résidanat en pharmacie :
   **ajout rapide** par copier-coller, réglages (chrono, date de l'examen), sauvegarde JSON.
 - Chronomètre total + compte à rebours par question (la solution s'affiche quand le temps est écoulé), pause.
 - Raccourcis clavier : `A`–`E` pour cocher, `Entrée` pour valider, `P` pour pause.
+- **Accueil pro** : compte à rebours jusqu'à l'examen, statistiques, cartes de modules (un clic lance une séance),
+  séance rapide de 10 QCM.
+- **Thèmes** (Admin → Apparence & réglages) : *Bleu & rose*, *Bleu* ou *Rose*, appliqués sur tous les appareils.
+- **Bannière d'annonce** en haut de la page, modifiable dans l'admin (message, lien, couleur, affichée ou non).
 - **Deux mots de passe** (jamais écrits dans le code, ils sont rangés dans Cloudflare) :
   `SARA_PASSWORD` pour entrer sur le site, `ADMIN_PASSWORD` pour modifier les questions.
   Le mot de passe est retenu sur l'appareil ; lien « Se déconnecter » en bas de page.
@@ -95,7 +99,8 @@ Le site est en ligne sur `https://qcm-pharma.pages.dev` :
 - Sara : `https://qcm-pharma.pages.dev/#/sara`
 - Admin : `https://qcm-pharma.pages.dev/#/admin`
 
-Chaque `git push` redéploie automatiquement le site. Les questions, elles, restent dans KV.
+Si le projet a été créé avec Wrangler (sans connexion Git), mettre le site à jour avec `npm run deploy`.
+Les questions, elles, restent dans KV : un nouveau déploiement ne les efface pas.
 
 > Note : KV peut mettre jusqu'à ~1 minute pour propager une modification dans le monde entier.
 > Pensez à cliquer « Télécharger (JSON) » dans l'admin de temps en temps pour garder une copie.

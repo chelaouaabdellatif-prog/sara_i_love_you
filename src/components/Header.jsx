@@ -13,6 +13,9 @@ export default function Header({ route, settings }) {
         </span>
       </a>
       <nav className="nav">
+        <a href="#/" className={route === '/' ? 'active' : ''}>
+          Accueil
+        </a>
         <a href="#/sara" className={route.startsWith('/sara') ? 'active' : ''}>
           Espace Sara
         </a>

@@ -1,4 +1,5 @@
 export const LETTERS = 'ABCDEFGH';
+export const HISTORY_KEY = 'qcm-sara-history';
 
 export const MODULES = [
   'Pharmacologie',

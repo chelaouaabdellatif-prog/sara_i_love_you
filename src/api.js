@@ -1,7 +1,18 @@
 import { SEED_QUESTIONS } from './seed.js';
 
 const LOCAL_KEY = 'qcm-pharma-local-data';
-export const DEFAULT_SETTINGS = { secondsPerQuestion: 90, examDate: '2026-10-19' };
+export const DEFAULT_SETTINGS = {
+  secondsPerQuestion: 90,
+  examDate: '2026-10-19',
+  theme: 'bleu-rose',
+  banner: {
+    enabled: true,
+    text: 'Résidanat pharmacie — lundi 19 octobre à Alger. Bon courage Sara !',
+    link: '',
+    linkLabel: '',
+    style: 'degrade',
+  },
+};
 
 // En développement (npm run dev) il n'y a pas de serveur Cloudflare :
 // les données sont alors gardées dans le navigateur (mode local, sans mot de passe).
@@ -13,7 +24,11 @@ export class AuthError extends Error {}
 function normalize(data, role) {
   return {
     questions: Array.isArray(data?.questions) ? data.questions : SEED_QUESTIONS,
-    settings: { ...DEFAULT_SETTINGS, ...(data?.settings || {}) },
+    settings: {
+      ...DEFAULT_SETTINGS,
+      ...(data?.settings || {}),
+      banner: { ...DEFAULT_SETTINGS.banner, ...(data?.settings?.banner || {}) },
+    },
     role,
   };
 }

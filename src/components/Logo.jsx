@@ -3,7 +3,7 @@ export default function Logo({ size = 40 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" role="img" aria-label="Pharmacie">
       <path
-        fill="var(--blue-600)"
+        fill="var(--primary-600)"
         d="M24 4h16a4 4 0 0 1 4 4v12h12a4 4 0 0 1 4 4v16a4 4 0 0 1-4 4H44v12a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4V44H8a4 4 0 0 1-4-4V24a4 4 0 0 1 4-4h12V8a4 4 0 0 1 4-4z"
       />
       <g fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">

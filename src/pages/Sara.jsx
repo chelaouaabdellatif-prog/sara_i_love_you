@@ -1,8 +1,20 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { LETTERS, countByModule, formatTime, moduleOf, sameSet, shuffle, storage } from '../utils.js';
+import { HISTORY_KEY, LETTERS, countByModule, formatTime, moduleOf, sameSet, shuffle, storage } from '../utils.js';
 
-const HISTORY_KEY = 'qcm-sara-history';
 const TIME_OPTIONS = [30, 45, 60, 90, 120, 180, 0];
+
+// Liens depuis l'accueil : #/sara?module=Toxicologie&n=10&start=1
+function readPreset(route) {
+  const params = new URLSearchParams(route.split('?')[1] || '');
+  return { module: params.get('module'), count: Number(params.get('n')) || 0, start: params.get('start') === '1' };
+}
+
+function quickSession({ questions, settings }, preset) {
+  const pool = preset.module ? questions.filter((q) => moduleOf(q) === preset.module) : questions;
+  if (!pool.length) return null;
+  const items = buildItems(pool, { shuffleQuestions: true, shuffleChoices: false }).slice(0, preset.count || 20);
+  return { items, secondsPerQuestion: settings.secondsPerQuestion };
+}
 
 // Une "séance" = liste d'items { q, order } (order = ordre d'affichage des réponses)
 function buildItems(questions, { shuffleQuestions, shuffleChoices }) {
@@ -13,11 +25,17 @@ function buildItems(questions, { shuffleQuestions, shuffleChoices }) {
   });
 }
 
-export default function Sara({ data }) {
-  const [phase, setPhase] = useState('setup');
-  const [session, setSession] = useState(null);
+export default function Sara({ data, route }) {
+  const [preset] = useState(() => readPreset(route));
+  const [session, setSession] = useState(() => (preset.start ? quickSession(data, preset) : null));
+  const [phase, setPhase] = useState(() => (session ? 'play' : 'setup'));
   const [result, setResult] = useState(null);
   const [history, setHistory] = useState(() => storage.get(HISTORY_KEY, []));
+
+  // On retire les paramètres de l'adresse : recharger la page ne relance pas la séance rapide.
+  useEffect(() => {
+    if (route.includes('?')) window.history.replaceState(null, '', '#/sara');
+  }, [route]);
 
   function start(nextSession) {
     setSession(nextSession);
@@ -63,14 +81,24 @@ export default function Sara({ data }) {
       />
     );
   }
-  return <Setup questions={data.questions} settings={data.settings} history={history} onStart={start} />;
+  return (
+    <Setup
+      questions={data.questions}
+      settings={data.settings}
+      history={history}
+      initialModule={preset.module}
+      onStart={start}
+    />
+  );
 }
 
 /* ---------- Choix de la séance ---------- */
 
-function Setup({ questions, settings, history, onStart }) {
+function Setup({ questions, settings, history, initialModule, onStart }) {
   const modules = useMemo(() => countByModule(questions), [questions]);
-  const [selected, setSelected] = useState(() => modules.map((m) => m.name));
+  const [selected, setSelected] = useState(() =>
+    modules.some((m) => m.name === initialModule) ? [initialModule] : modules.map((m) => m.name),
+  );
   const [count, setCount] = useState(Math.min(20, questions.length));
   const [seconds, setSeconds] = useState(settings.secondsPerQuestion ?? 90);
   const [shuffleQuestions, setShuffleQuestions] = useState(true);

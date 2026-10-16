@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { saveData } from '../api.js';
 import { parseBulk } from '../bulk.js';
+import AnnouncementBar, { isSafeLink } from '../components/AnnouncementBar.jsx';
 import PasswordForm from '../components/PasswordForm.jsx';
 import { LETTERS, MODULES, countByModule, moduleOf, newId } from '../utils.js';
 
@@ -37,7 +38,7 @@ function Dashboard({ data, onDataChange, password }) {
   const tabs = [
     ['questions', `Questions (${data.questions.length})`],
     ['bulk', 'Ajout rapide'],
-    ['settings', 'Réglages & sauvegarde'],
+    ['settings', 'Apparence & réglages'],
   ];
 
   return (
@@ -389,6 +390,102 @@ function isValidQuestion(q) {
   );
 }
 
+const THEMES = [
+  { id: 'bleu-rose', label: 'Bleu & rose', swatch: 'linear-gradient(120deg, #0b2559, #1d5fd1 55%, #e0457f)' },
+  { id: 'bleu', label: 'Bleu', swatch: 'linear-gradient(120deg, #0b2559, #1d5fd1 60%, #3b7cf0)' },
+  { id: 'rose', label: 'Rose', swatch: 'linear-gradient(120deg, #4f0d2c, #d13a78 60%, #8b5cf6)' },
+];
+
+// Un clic applique et enregistre le thème pour tout le site.
+function ThemeCard({ data, persist }) {
+  return (
+    <section className="card">
+      <h2>Apparence</h2>
+      <p className="muted">Le thème choisi s’applique aussi sur le téléphone de Sara.</p>
+      <div className="theme-picker">
+        {THEMES.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            className={`theme-option ${data.settings.theme === t.id ? 'on' : ''}`}
+            aria-pressed={data.settings.theme === t.id}
+            onClick={() => persist({ ...data, settings: { ...data.settings, theme: t.id } }, `Thème « ${t.label} » appliqué`)}
+          >
+            <span className="theme-swatch" style={{ background: t.swatch }} />
+            {t.label}
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function BannerCard({ data, persist }) {
+  const [banner, setBanner] = useState(data.settings.banner);
+  const [error, setError] = useState('');
+  const set = (patch) => setBanner((b) => ({ ...b, ...patch }));
+
+  function save(e) {
+    e.preventDefault();
+    if (banner.link.trim() && !isSafeLink(banner.link)) {
+      setError('Le lien doit commencer par https:// (ou http://).');
+      return;
+    }
+    setError('');
+    persist({ ...data, settings: { ...data.settings, banner: { ...banner, text: banner.text.trim() } } }, 'Bannière enregistrée');
+  }
+
+  return (
+    <form className="card" onSubmit={save}>
+      <h2>Bannière d’annonce (en haut de la page)</h2>
+      <label className="toggles">
+        <span>
+          <input type="checkbox" checked={banner.enabled} onChange={(e) => set({ enabled: e.target.checked })} /> Afficher la
+          bannière
+        </span>
+      </label>
+      <label className="field">
+        <span>Message</span>
+        <textarea
+          rows={2}
+          maxLength={220}
+          value={banner.text}
+          onChange={(e) => set({ text: e.target.value })}
+          placeholder="ex : Nouveau : 50 QCM de pharmacologie ajoutés !"
+        />
+      </label>
+      <div className="grid-2">
+        <label className="field">
+          <span>Lien (optionnel)</span>
+          <input type="url" value={banner.link} onChange={(e) => set({ link: e.target.value })} placeholder="https://…" />
+        </label>
+        <label className="field">
+          <span>Texte du bouton</span>
+          <input value={banner.linkLabel} onChange={(e) => set({ linkLabel: e.target.value })} placeholder="En savoir plus" />
+        </label>
+      </div>
+      <label className="field">
+        <span>Couleur</span>
+        <select value={banner.style} onChange={(e) => set({ style: e.target.value })}>
+          <option value="degrade">Dégradé bleu → rose</option>
+          <option value="rose">Rose</option>
+          <option value="bleu">Bleu</option>
+        </select>
+      </label>
+      {banner.text.trim() && (
+        <div className="field">
+          <span>Aperçu</span>
+          <div className="banner-preview">
+            <AnnouncementBar banner={banner} preview />
+          </div>
+        </div>
+      )}
+      {error && <p className="alert alert-error">{error}</p>}
+      <button className="btn btn-primary">Enregistrer la bannière</button>
+    </form>
+  );
+}
+
 function SettingsTab({ data, persist }) {
   const [seconds, setSeconds] = useState(data.settings.secondsPerQuestion);
   const [examDate, setExamDate] = useState(data.settings.examDate || '');
@@ -400,7 +497,8 @@ function SettingsTab({ data, persist }) {
   }
 
   function exportJson() {
-    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const { questions, settings } = data;
+    const blob = new Blob([JSON.stringify({ questions, settings }, null, 2)], { type: 'application/json' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
     a.download = `qcm-pharma-${new Date().toISOString().slice(0, 10)}.json`;
@@ -438,6 +536,9 @@ function SettingsTab({ data, persist }) {
 
   return (
     <>
+      <ThemeCard data={data} persist={persist} />
+      <BannerCard data={data} persist={persist} />
+
       <form className="card" onSubmit={saveSettings}>
         <h2>Réglages</h2>
         <div className="grid-2">

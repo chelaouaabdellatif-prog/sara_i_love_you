@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import AnnouncementBar from './components/AnnouncementBar.jsx';
 import Header from './components/Header.jsx';
 import PasswordForm from './components/PasswordForm.jsx';
 import Home from './pages/Home.jsx';
@@ -8,6 +9,7 @@ import { AuthError, DEFAULT_SETTINGS, isLocalMode, loadData } from './api.js';
 import { storage } from './utils.js';
 
 const PW_KEY = 'qcm-password';
+const THEME_KEY = 'qcm-theme';
 
 function useHashRoute() {
   const read = () => window.location.hash.slice(1) || '/';
@@ -37,6 +39,13 @@ export default function App() {
     // Chargement initial uniquement ; les connexions suivantes passent par login().
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  // Le thème vient des réglages admin ; on le garde aussi en mémoire pour l'écran de connexion.
+  const theme = data?.settings.theme ?? storage.get(THEME_KEY, DEFAULT_SETTINGS.theme);
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    if (data) storage.set(THEME_KEY, theme);
+  }, [theme, data]);
 
   // Essaie un mot de passe ; renvoie le rôle obtenu ('sara' | 'admin') ou null s'il est faux.
   async function login(pw) {
@@ -80,13 +89,14 @@ export default function App() {
   } else if (route.startsWith('/admin')) {
     page = <Admin data={data} onDataChange={setData} password={password} onLogin={login} />;
   } else if (route.startsWith('/sara')) {
-    page = <Sara data={data} />;
+    page = <Sara key={route} data={data} route={route} />;
   } else {
     page = <Home data={data} />;
   }
 
   return (
     <div className="app">
+      {data && <AnnouncementBar banner={data.settings.banner} />}
       <Header route={route} settings={data?.settings ?? DEFAULT_SETTINGS} />
       {data && isLocalMode() && (
         <div className="local-banner">
